@@ -36,7 +36,7 @@ $tpl
 
     // include JavaScript files
     ->js(array(
-        'ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', // any external lib (you can use http:// or https:// urls)
+        '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js', // any external lib (you can use http:// or https:// urls)
         // 'libs/jquery-1.x.min.js', // your own local lib
         'template.js',
 		'bootstrap.min.js',
