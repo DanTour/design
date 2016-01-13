@@ -56,6 +56,13 @@
     <positions>
         <position>pre_component</position>
         <position>post_component</position>
+		<position>top-menu</position>
+		<position>carousel</position>
+		<position>footer</positions>
+		<position>logo</position>
+		<position>content_A</position>
+		<position>content_B</position>
+		<position>content_C</positon>
     </positions>
 
     <config>
