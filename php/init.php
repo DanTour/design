@@ -32,6 +32,7 @@ $tpl
         // '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', // any external lib (you can use http:// or https:// urls)
 		'main.css', 
 		'bootstrap/bootstrap.less',
+		'bootstrap/bootstrap_theme.less'
     ))
 
     // include JavaScript files
