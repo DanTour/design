@@ -41,8 +41,8 @@ $tpl
         // 'libs/jquery-1.x.min.js', // your own local lib
         'template.js',
 		'bootstrap.min.js',
-		'common.js',
-		'custom.js'
+		//'common.js',
+		'custom.js',
     ))
 
     // exclude css files from system or components (experimental!)
