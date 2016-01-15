@@ -26,13 +26,11 @@ $tpl
     // compile less *.file to CSS and cache it
     // compile scss *.file to CSS and cache it (experimental!)
     ->css(array(
-        // 'template.css', // from jblank/css folder
-        'template.less', // from jblank/less folder
-        // 'template.scss',// from jblank/scss folder
-        // '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', // any external lib (you can use http:// or https:// urls)
-		'main.css', 
+     	'main.css', 
 		'bootstrap/bootstrap.less',
 		'bootstrap/bootstrap_theme.less',
+		 'template.less',
+		 '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
     ))
 
     // include JavaScript files

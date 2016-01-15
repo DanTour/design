@@ -63,6 +63,7 @@
 		<position>content_A</position>
 		<position>content_B</position>
 		<position>content_C</position>
+		<position>under_carousel</position>
     </positions>
 
     <config>
