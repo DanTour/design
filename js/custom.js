@@ -1,10 +1,13 @@
-//dropdown on hover
-/*(function($) {
+(function($) {
 	$(document).ready(function() {
-		$('.dropdown').hover(function(){
+		$('.dropdown, .dropdown-submenu').hover(function() {
 			$(this).addClass('open');
 		},function() {
 			$(this).removeClass('open');
 		});
-	});	
-})(jQuery);*/
+		
+		$('[data-submenu]').submenupicker();
+		
+	});
+	
+})(jQuery);

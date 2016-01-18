@@ -48,20 +48,23 @@ require dirname(__FILE__) . '/php/init.php';
 	
 		
 		
-			<div class="navbar-fixed-top">
-				<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Logo</a>
-				</div>
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<jdoc:include type="modules" name="top_menu" />
-						</div>
-			</div>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+		<a class="navbar-brand" href="#">
+			Project Name
+		</a>
+	  </div>
+
+	  <div class="collapse navbar-collapse navbar-right margin-right">
+		<jdoc:include type="modules" name="top_menu" />
+	  </div>
+	</nav>
 		<div id="myCarousel" class="carousel slide margin" data-ride="carousel">
 	<!-- Indicators -->
 			<ol class="carousel-indicators">

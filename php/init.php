@@ -29,6 +29,7 @@ $tpl
      	'main.css', 
 		'bootstrap/bootstrap.less',
 		'bootstrap/bootstrap_theme.less',
+		'bootstrap-submenu.min.css',
 		 'template.less',
 		 '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
     ))
@@ -39,6 +40,7 @@ $tpl
         // 'libs/jquery-1.x.min.js', // your own local lib
         'template.js',
 		'bootstrap.min.js',
+		'bootstrap-submenu.min.js',
 		//'common.js',
 		'custom.js',
     ))
@@ -52,8 +54,8 @@ $tpl
     // exclude JS files from system or components (experimental!)
     ->excludeJS(array(
         // 'regex pattern or filename',
-        // 'mootools',             // remove Mootools lib
-        // 'media\/jui\/js',       // remove jQuery lib
+        'mootools',             // remove Mootools lib
+        'media\/jui\/js',       // remove jQuery lib
         // 'media\/system\/js',    // remove system libs
     ))
 
