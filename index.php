@@ -46,47 +46,25 @@ require dirname(__FILE__) . '/php/init.php';
         <jdoc:include type="modules" name="debug" />
     <?php endif; ?>
 	
-		
-		
-		<nav class="navbar navbar-default navbar-fixed-top">
-		  <div class="navbar-header">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="navbar-header">
 			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-			  <span class="sr-only">Toggle navigation</span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			</button>
-		<a class="navbar-brand" href="#">
-			Project Name
-		</a>
-	  </div>
-
-	  <div class="collapse navbar-collapse navbar-right margin-right">
-		<jdoc:include type="modules" name="top_menu" />
-	  </div>
-	</nav>
-		<div id="myCarousel" class="carousel slide margin" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1" class=""></li>
-			</ol>
-			<jdoc:include type="modules" name="carousel" />
-			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>		
+			<a class="navbar-brand" href="#">Project Name</a>
 		</div>
-			<jdoc:include type="modules" name="under_carousel" />
-			<div class="news-slider">
-				<div class="container">
-					
-				</div>
-			</div>
-			<jdoc:include type="modules" name="man_page_content" />
-			<jdoc:include type="modules" name="footer" />
-	</body>
+		<div class="collapse navbar-collapse navbar-right margin-right">
+			<jdoc:include type="modules" name="top_menu" />
+		</div>
+	</nav>
+	
+	<jdoc:include type="modules" name="carousel" />
+	<jdoc:include type="modules" name="under_carousel" />
+	<jdoc:include type="modules" name="man_page_content" />
+	<jdoc:include type="modules" name="footer" />
+	
+</body>
 </html>

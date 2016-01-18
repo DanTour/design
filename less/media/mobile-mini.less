@@ -1,30 +1,98 @@
 // Smartphones, iPhone, portrait 480x320 phones
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700&subset=latin,latin-ext,cyrillic);
+@mg-top: 80px;
 
+body, html, h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+}
+
+h2 {
+	font-size: 40px;
+	font-weight: lighter;
+	padding-bottom: 45px;
+}
+
+.btn {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.btn-lg {
+	text-transform : uppercase;
+	color : #007cb7;
+	font-weight : bold;
+	background-color : rgba(255,255,255,.45);
+	border : 5px solid;
+	border-color : #007cb7;
+	
+	&:hover {
+		background-color : #007cb7;
+		border-color : #007cb7;
+		color: white;
+	}
+}
+
+.carousel-caption {
+	top: 0;
+	bottom: auto;
+	padding-top: 5%;
+	padding-bottom: 0;
+	
+	h1 {
+		background-color: rgba(255, 255, 255, .5);
+		font-size: 4rem;
+		font-weight: lighter;
+		text-transform: none;
+		color: black;
+	}
+	
+	p {
+		background-color: rgba(255, 255, 255, .5);
+		font-size: 20px;
+		font-weight: normal;
+		text-transform: none;
+		color: black;
+	}
+}
+
+.carousel {
+	.item {
+		position: relative;
+		background-position-x: 50%;
+		background-position-y: 60%;
+	}
+}
 
 .navbar-fixed-top {
 	background-color : white;
 }
+
 .margin {
 	margin : 30px 0;
 }
+
 .margin-right {
 	margin-right : 20px;
 }
+
+.margins {
+	margin-top: @mg-top;
+	margin-bottom: @mg-top;
+}
+
 .aft-carousel {
+	.margins;
+	
 	.image {
-		margin-top : 60px;
 		min-height : 181px;
 	}
+	
 	p {
-		margin-top : 55px;
+		margin-top : 10px;
 		text-align : center;
-		font-family: 'Roboto', sans-serif;
 		font-size : 20px;
-		span {
-			color : #007cb7;
-		}
 	}
 }
 .news-slider {
@@ -34,26 +102,31 @@
 .after-news-slider {
 	background : url(../../images/tree.png) no-repeat;
 	background-size : cover;
+	.margins;
+	
 	h2 {
+		background-color: rgba(255, 255, 255, .5);
 		margin-top : 360px;
+		padding: 20px;
 	}
 	.btn {
 		margin-top : 20px;
 		margin-bottom : 155px;
-	}
-	
+	}	
 }
+
 .list-reasons {
 	.list-i {
 		margin-top : 80px;
 		ul {
 			li {
 				margin-top : 20px;
+				
 				span {
 					font-family : 'Roboto';
-					font-color : black;
 					font-size : 24px;
 				}
+				
 				padding-left : 100px;
 				list-style-type : none;
 				font-family : 'Roboto';
@@ -76,38 +149,47 @@
 			}
 	}
 }
-blockquote {
-	user_sign {
-			display : block;
-			text-align : left;
-			font-weight : normal;
-			font-style : italic;
-		}
-}
+
 .quotes {
-		margin-top : 140px;
-		h1 {
-			font-weight : normal;
+	margin-top: @mg-top;
+	margin-bottom: @mg-top;
+	
+	.user-quotes {
+		margin-top: @mg-top;
+		
+		.img-circle {
+			border: 5px solid #337ab7;
 		}
-		p {
-			margin-top : 45px;
-			text-align : center;
-		}
-		.p_quotes {
-			img {
-				border : 5px solid #007cb7;
+		
+		blockquote {
+			border-left : none;
+			padding-top: @mg-top/2;
+			margin-bottom: 0;
+			
+			p {
+				font-size : 18px;
+				text-align : left;
+				font-weight: lighter;
 			}
-			margin-top : 71px;
+			
+			.feedback-text {
+				font-style: italic;
+				
+				&:before {
+					content: '"';
+				}
+				
+				&:after {
+					content: '"';
+				}
+			}
 		}
+	}
 }
+
 .special {
-	margin-top : 150px;
-	h2 {
-		font-weight : normal;
-	}
-	.row:nth-child(2) {
-		margin-top : 70px;
-	}
+	margin-top : @mg-top;
+	
 	span {
 			font-weight : bold;
 			font-family : 'Roboto';
@@ -132,7 +214,6 @@ blockquote {
 			text-align : left;
 		}
 }
-
 
 footer {
 	margin-top : 90px;
