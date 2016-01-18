@@ -27,11 +27,11 @@ $tpl
     // compile scss *.file to CSS and cache it (experimental!)
     ->css(array(
      	'main.css', 
-		'bootstrap/bootstrap.less',
-		'bootstrap/bootstrap_theme.less',
+		'//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
 		'bootstrap-submenu.min.css',
 		 'template.less',
 		 '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
+		 'bootstrap_theme.less',
     ))
 
     // include JavaScript files

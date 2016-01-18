@@ -60,11 +60,15 @@
 		<position>carousel</position>
 		<position>footer</position>
 		<position>logo</position>
-		<position>content_A</position>
+		<position>man_page_content</position>
 		<position>content_B</position>
 		<position>content_C</position>
 		<position>under_carousel</position>
-    </positions>
+		<position>travel_spec</position>
+		<position>list_reasons</position>
+		<position>quotes</position>
+		<position>special</position>
+	</positions>
 
     <config>
         <fields name="params">
