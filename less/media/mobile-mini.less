@@ -1,16 +1,40 @@
 // Smartphones, iPhone, portrait 480x320 phones
 
+//Less Variables
 @mg-top: 80px;
+@ff-def: 'Roboto', sans-serif;
+@ft-def: 18px;
 
+//Less Styles
 body, html, h2 {
-	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
+	font-family: @ff-def;
+	font-size: @ft-def;
+}
+
+img {
+	max-width : 100%;
+}
+
+small {
+	font-size: 65%;
+}
+
+hr {
+	border-top: 1px solid #8f8f8f;
 }
 
 h2 {
 	font-size: 40px;
 	font-weight: lighter;
 	padding-bottom: 45px;
+}
+
+.mg-top-1{
+	margin-top: @mg-top/2;
+}
+
+.mg-top-2 {
+	margin-top: @mg-top;
 }
 
 .btn {
@@ -118,6 +142,7 @@ h2 {
 .list-reasons {
 	.list-i {
 		margin-top : 80px;
+		
 		ul {
 			li {
 				margin-top : 20px;
@@ -134,19 +159,23 @@ h2 {
 				background : url(../../images/span_items.png) no-repeat;
 			}
 		}
+		
 		li:nth-child(1){
 				margin-top : 0;
 				background-position : 3% -5%;
 		}
+		
 		li:nth-child(2){
 					background-position : 3% 31%;
 		}
+		
 		li:nth-child(3){
 					background-position : 3% 68%;
 		}
+		
 		li:nth-child(4){
 				background-position : 3% 105%;
-			}
+		}
 	}
 }
 
@@ -187,68 +216,29 @@ h2 {
 	}
 }
 
-.special {
-	margin-top : @mg-top;
+.container {
+	h5 {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
 	
-	span {
-			font-weight : bold;
-			font-family : 'Roboto';
-			font-size : 18px;
-			text-align : left;
-		}
-	
-}
-.special ul, footer ul {
-		margin-top : 20px;
+	ul.list {
 		padding-left : 0;
+		
 		li {
 			list-style-type : none;
-			font-family : 'Roboto';
-			font-size : 18px;
 			margin-bottom : 20px;
 		}
-		span {
-			font-weight : bold;
-			font-family : 'Roboto';
-			font-size : 18px;
-			text-align : left;
-		}
+	}
 }
 
 footer {
-	margin-top : 90px;
+	background-color: #f1f1f1;
+	padding-top: @mg-top/2;
+	margin-top : @mg-top;
 	margin-bottom : 0;
-	.row {
-		margin-top : 70px;
-		.logos-image {
-			margin-top : 70px;
-		}
-		img {
-			max-width : 100%;
-		}
+		
+	.copyright {
+		padding-bottom : 20px;
 	}
-	
-	.is_top {
-		font-family : 'Roboto';
-		font-size : 18px;
-		font-weight : bold;
-	}
-	
-	span {
-			font-weight : bold;
-			font-family : 'Roboto';
-			font-size : 18px;
-			text-align : left;
-		}
-		h5 {
-			font-family : 'Roboto';
-			font-size : 18px;
-		}
-		.copyright {
-			margin-top : 75px;
-			padding-bottom : 20px;
-			background-color : #f1f1f1;
-			border-top : solid 2px rgb(143,143,143);
-	}
-	
 }
