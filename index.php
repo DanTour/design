@@ -64,6 +64,11 @@ require dirname(__FILE__) . '/php/init.php';
 	<jdoc:include type="modules" name="carousel" />
 	<jdoc:include type="modules" name="under_carousel" />
 	<jdoc:include type="modules" name="man_page_content" />
+	
+	<div class="container">
+		<jdoc:include type="component" />
+	</div>
+	
 	<jdoc:include type="modules" name="footer" />
 	
 </body>
