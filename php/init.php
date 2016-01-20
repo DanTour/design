@@ -31,6 +31,7 @@ $tpl
 		'//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
 		'bootstrap-submenu.min.css',
 		'carousel.css',
+		'slimbox-jquery/slimbox2-rtl.css',
 		'template.less',
     ))
 
@@ -42,6 +43,7 @@ $tpl
 		'bootstrap.min.js',
 		'bootstrap-submenu.min.js',
 		//'common.js',
+		'slimbox2.js',
 		'custom.js',
     ))
 

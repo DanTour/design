@@ -11,15 +11,12 @@
 
 defined('_JEXEC') or die;
 
-
 // init $tpl helper
 require dirname(__FILE__) . '/php/init.php';
 
 ?><?php echo $tpl->renderHTML(); ?>
 <head>
     <jdoc:include type="head" />
-	<!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">-->
-	
 </head>
 <body class="<?php echo $tpl->getBodyClasses(); ?>">
 
@@ -47,6 +44,7 @@ require dirname(__FILE__) . '/php/init.php';
     <?php endif; ?>
 	
 	<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
 		<div class="navbar-header">
 			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="sr-only">Toggle navigation</span>
@@ -59,16 +57,17 @@ require dirname(__FILE__) . '/php/init.php';
 		<div class="collapse navbar-collapse navbar-right margin-right">
 			<jdoc:include type="modules" name="top_menu" />
 		</div>
+	</div>
 	</nav>
 	
 	<jdoc:include type="modules" name="carousel" />
-	<jdoc:include type="modules" name="under_carousel" />
+	<div class="container">
+		<jdoc:include type="modules" name="breadcrumbs" />
+	</div>
 	<jdoc:include type="modules" name="man_page_content" />
-	
 	<div class="container">
 		<jdoc:include type="component" />
 	</div>
-	
 	<jdoc:include type="modules" name="footer" />
 	
 </body>
