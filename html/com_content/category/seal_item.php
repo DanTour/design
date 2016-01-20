@@ -19,7 +19,7 @@ $images = json_decode($this->item->images);
 
 <div class="category-item">
 		<div class="row">
-			<img class="image_intro col-md-4" src="<?php echo $images->image_intro; ?>" alt="<?php $this->item->image_intro_alt; ?>">
+		<img class="image_intro col-md-4" src="<?php echo $images->image_intro; ?>" alt="<?php $this->item->image_intro_alt; ?>">
 			<div class="wrap-content col-md-8 col-xs-12">
 			<h4><?php echo $this->item->title; ?></h4>
 				<p><?php echo $this->item->introtext?></p>
