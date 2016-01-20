@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0e36cd609b8b4d7915ff4a38417562ea1b731463
 <?php
 /**
  * @package     Joomla.Site
@@ -7,6 +10,10 @@
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0e36cd609b8b4d7915ff4a38417562ea1b731463
 defined('_JEXEC') or die;
 
 // Create a shortcut for params.
@@ -14,6 +21,7 @@ $params = $this->item->params;
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 $canEdit = $this->item->params->get('access-edit');
 $info    = $params->get('info_block_position', 0);
+<<<<<<< HEAD
 $images = json_decode($this->item->images);
 ?>
 
@@ -43,12 +51,19 @@ $images = json_decode($this->item->images);
 
 
 <!--
+=======
+?>
+>>>>>>> 0e36cd609b8b4d7915ff4a38417562ea1b731463
 <?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
 	|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate())) : ?>
 	<div class="system-unpublished">
 <?php endif; ?>
 
 <?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0e36cd609b8b4d7915ff4a38417562ea1b731463
 <?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 	<?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
 <?php endif; ?>
@@ -67,7 +82,10 @@ $images = json_decode($this->item->images);
 
 <?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
 
+<<<<<<< HEAD
 <?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
+=======
+>>>>>>> 0e36cd609b8b4d7915ff4a38417562ea1b731463
 
 <?php if (!$params->get('show_intro')) : ?>
 	<?php echo $this->item->event->afterDisplayTitle; ?>
@@ -98,4 +116,8 @@ $images = json_decode($this->item->images);
 </div>
 <?php endif; ?>
 
+<<<<<<< HEAD
 <?php echo $this->item->event->afterDisplayContent; ?>-->
+=======
+<?php echo $this->item->event->afterDisplayContent; ?>
+>>>>>>> 0e36cd609b8b4d7915ff4a38417562ea1b731463

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
+<<<<<<< HEAD
 	<layout title="seal" option="seal">
 		<help key = "seal-key" />
+=======
+	<layout title="Seal" option="Seal">
+		<help key = "Seal-Key" />
+>>>>>>> 0e36cd609b8b4d7915ff4a38417562ea1b731463
 		<message>
 			<![CDATA[COM_CONTENT_CATEGORY_VIEW_BLOG_DESC]]>
 		</message>
