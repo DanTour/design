@@ -13,17 +13,13 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 JHtml::_('behavior.caption');
 ?>
-<<<<<<< .mine
-<div class="blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Blog">
-=======
 <<<<<<< HEAD
->>>>>>> .theirs
 <div class="row" >
 	<div class="col-md-9 col-xs-12">
 		<div class="blog <?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Blog">
 				<?php if ($this->params->get('show_page_heading')) : ?>
 					<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
-
+							
 				<?php endif; ?>
 
 				<?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>
@@ -66,7 +62,7 @@ JHtml::_('behavior.caption');
 						<?php endforeach; ?>
 					</div><!-- end items-leading -->
 				<?php endif; ?>
-
+					
 				<?php
 				$introcount = (count($this->intro_items));
 				$counter = 0;
@@ -117,11 +113,7 @@ JHtml::_('behavior.caption');
 				<?php endif; ?>
 			</div>
 	</div>
-<<<<<<< .mine
-			<?php echo $this->pagination->getPagesLinks(); ?> </div>
 =======
-=======
->>>>>>> .theirs
 <div class="blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Blog">
 	<?php if ($this->params->get('show_page_heading')) : ?>
 		<div class="page-header">
@@ -224,9 +216,5 @@ JHtml::_('behavior.caption');
 			<?php endif; ?>
 			<?php echo $this->pagination->getPagesLinks(); ?> </div>
 	<?php endif; ?>
-<<<<<<< .mine
-
-=======
 >>>>>>> 0e36cd609b8b4d7915ff4a38417562ea1b731463
->>>>>>> .theirs
 </div>
