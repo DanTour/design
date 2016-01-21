@@ -16,7 +16,6 @@ $info    = $params->get('info_block_position', 0);
 $images = json_decode($this->item->images);
 $link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
 ?>
-
 <hr class="category">
 <div class="category-item">
 	<div class="row col-md-12 no-gutter">
