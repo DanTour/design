@@ -412,9 +412,20 @@ footer {
 .info {
 	position : relative ;
 	border : 1px solid #bcad99;
+	margin-right : -2px;
+	margin-bottom : 15px;
+	
+	.link-block {
+		position : relative;
+		display : block;
+		
+		.responsive {
+			width : 100%;
+		}
+	}
 	
 	.hov-summ {
-		height : 240px;
+		height : 100%;
 		background-color : #efe4d4;
 		opacity : 0.8;
 		position : absolute;
@@ -426,7 +437,8 @@ footer {
 			font-weight : lighter;
 			color : black;
 			font-size : 16px;
-			padding-left : 30px;
+			padding-left : 15px;
+			padding-right : 15px;
 		}
 	}
 	
@@ -434,17 +446,22 @@ footer {
 		font-weight : normal;
 		color : #007cb7;
 		font-size : 18px;
-		padding-left : 30px;
-		padding-top : 35px;
+		padding-top : 15px;
+		padding-left : 15px;
+		padding-right : 15px;
 	}
 	
 	.bot-title {
-		height : 60px;
-		font-weight : bold;
-		font-size : 16px;
-		padding-left : 20px;
-		padding-top : 15px;
-		padding-right : 35px;
+		a {
+			display : block;
+			color : black;
+			height : 60px;
+			font-weight : bold;
+			font-size : 16px;
+			padding-left : 20px;
+			padding-top : 15px;
+			padding-right : 35px;
+		}
 	}
 	
 	.button-block {
@@ -458,3 +475,4 @@ footer {
 		}
 	}
 }
+

@@ -12,31 +12,33 @@ defined('_JEXEC') or die;
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 JHtml::_('behavior.caption');
+
 ?>
 
 <div class="container">
 	
 			<?php if (!empty($this->intro_items)) : ?>
 						<?php foreach($this->intro_items as $item) : ?>
-							<div class="col-md-4 col-xs-12 no-gutter">
+							<div class="col-md-4 col-sm-6 col-xs-12">
 								<div class="info">
 								<?php $images = json_decode($item->images);
+								$link = JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid)) ;
 									if (!empty( $images )&& $images->image_intro ) : ?>
-										<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid)) ; ?>">
-											<img src="<?php echo $images->image_intro ; ?>" alt="<?php if (!empty($images->image_intro_alt)) : echo $images->image_intro_alt; endif  ?>">
-										</a>
-										<?php if (!empty($item->title)) : ?>
-											<p class="bot-title">
-												<?php echo $item->title ; ?>
-											</p>
-											<div class="hov-summ hidden-sm">
+											<a class="link-block " href="<?php echo $link ; ?>">
+												<img class="responsive" src="<?php echo $images->image_intro ; ?>" alt="<?php if (!empty($images->image_intro_alt)) : echo $images->image_intro_alt; endif  ?>">
+												<div class="hov-summ hidden-sm">
 												<h5><?php echo $item->title ; ?></h5>
 													<?php if (!empty($item->introtext)) : ?>
 														<p> <?php echo $item->introtext ; ?></p>
 											</div>
+											</a>
+										<?php if (!empty($item->title)) : ?>
+											<p class="bot-title">
+												<a href="<?php echo $link  ; ?>"><?php echo $item->title ; ?></a>
+											</p>
 											<?php if ($item->params->get('show_readmore')) : ?>
 												<div class="button-block text-center">
-													<a class="btn btn-md" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid)) ; ?>">Read more</a>
+													<a class="btn btn-md" href="<?php echo $link ; ?>">Read more</a>
 												</div>
 											<?php endif ?>
 													<?php endif ?>
