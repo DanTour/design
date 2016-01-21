@@ -1,4 +1,3 @@
-
 <?php
 /**
  * @package     Joomla.Site
@@ -15,87 +14,34 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 $canEdit = $this->item->params->get('access-edit');
 $info    = $params->get('info_block_position', 0);
 $images = json_decode($this->item->images);
+$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
 ?>
 
+<hr class="category">
 <div class="category-item">
-		<div class="row">
-		<img class="image_intro col-md-4" src="<?php echo $images->image_intro; ?>" alt="<?php $this->item->image_intro_alt; ?>">
-			<div class="wrap-content col-md-8 col-xs-12">
-			<h4><?php echo $this->item->title; ?></h4>
-				<p><?php echo $this->item->introtext?></p>
-					<div class="readmore-block">
-					<?php 
-							$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
-							echo JLayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link));
-						?>
-					</div>
-			</div>
+	<div class="row col-md-12 no-gutter">
+		<div class="col-xs-12 col-sm-4 pad-top-1">
+			<div class="pull-<?php echo htmlspecialchars($imgfloat); ?> item-image"> <img
+			<?php if ($images->image_fulltext_caption):
+				echo 'class="caption"' . ' title="' . htmlspecialchars($images->image_fulltext_caption) . '"';
+			endif; ?>
+			src="<?php echo htmlspecialchars($images->image_fulltext); ?>" alt="<?php echo htmlspecialchars($images->image_fulltext_alt); ?>" itemprop="image"/> </div>
 		</div>
-</div>	
-	
-	
-	
-
-
-
-
-
-
-
-<!--
-<?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
-	|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate())) : ?>
-	<div class="system-unpublished">
-<?php endif; ?>
-
-<?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
-<?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
-	<?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
-<?php endif; ?>
-
-<?php if ($params->get('show_tags') && !empty($this->item->tags->itemTags)) : ?>
-	<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
-<?php endif; ?>
-
-<?php // Todo Not that elegant would be nice to group the params ?>
-<?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
-	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') ); ?>
-
-<?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
-	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
-<?php endif; ?>
-
-<?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
-
-<?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
-
-<?php if (!$params->get('show_intro')) : ?>
-	<?php echo $this->item->event->afterDisplayTitle; ?>
-<?php endif; ?>
-<?php echo $this->item->event->beforeDisplayContent; ?> <?php echo $this->item->introtext; ?>
-
-<?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
-	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
-<?php  endif; ?>
-
-<?php if ($params->get('show_readmore') && $this->item->readmore) :
-	if ($params->get('access-view')) :
-		$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
-	else :
-		$menu = JFactory::getApplication()->getMenu();
-		$active = $menu->getActive();
-		$itemId = $active->id;
-		$link = new JUri(JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
-		$link->setVar('return', base64_encode(JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language), false)));
-	endif; ?>
-
-	<?php echo JLayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link)); ?>
-
-<?php endif; ?>
-
-<?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
-	|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate())) : ?>
+		<div class="col-md-8 col-xs-12 pad-top-1">
+		<a href="<?php echo $link; ?>"><?php echo $this->item->title; ?></a>
+			<p><?php echo $this->item->introtext?></p>
+		</div>
+		<div class="col-md-8 hidden-sm hidden-md hidden-lg pad-top-1">
+		<?php 
+			$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
+			echo JLayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link));
+		?>
+		</div>
+		<div class="col-md-8 align-btm hidden-xs pad-top-1">
+		<?php 
+			$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
+			echo JLayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link));
+		?>
+		</div>
+	</div>
 </div>
-<?php endif; ?>
-
-<?php echo $this->item->event->afterDisplayContent; ?>-->

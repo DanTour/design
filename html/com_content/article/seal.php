@@ -36,7 +36,7 @@ JHtml::_('behavior.caption');
 	}
 	?>
 
-	<div class="row col-md-12">	
+	<div class="col-md-12 no-gutter">
 		<?php // Todo Not that elegant would be nice to group the params ?>
 		<?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
 		|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') ); ?>
@@ -49,7 +49,7 @@ JHtml::_('behavior.caption');
 		<?php endif; ?>
 		<?php if ($params->get('show_title') || $params->get('show_author')) : ?>
 		
-		<div class="col-xs-12">
+		<div class="col-xs-12 no-gutter">
 			<?php endif; ?>
 			<?php if (!$this->print) : ?>
 				<?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
@@ -85,7 +85,7 @@ JHtml::_('behavior.caption');
 		<?php if (isset($images->image_fulltext) && !empty($images->image_fulltext)) : ?>
 		<?php $imgfloat = (empty($images->float_fulltext)) ? $params->get('float_fulltext') : $images->float_fulltext; ?>
 		
-		<div class="row col-md-12">
+		<div class="col-md-12 no-gutter">
 			<div class="row">
 				<div class="col-xs-12 col-sm-4 pad-top-1">
 					<div class="pull-<?php echo htmlspecialchars($imgfloat); ?> item-image"> <img
@@ -139,7 +139,7 @@ JHtml::_('behavior.caption');
 		</div>
 	</div>
 	
-	<div itemprop="articleBody" class="row col-md-12 article-body">
+	<div itemprop="articleBody" class="col-md-12 article-body no-gutter">
 		<?php echo $this->item->text; ?>
 	</div>
 

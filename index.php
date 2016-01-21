@@ -61,11 +61,17 @@ require dirname(__FILE__) . '/php/init.php';
 	</nav>
 	
 	<jdoc:include type="modules" name="carousel" />
-	<div class="container">
+	<jdoc:include type="modules" name="main_page_content" />
+	<div class="container no-gutter">
 		<jdoc:include type="modules" name="breadcrumbs" />
-	</div>
-	<jdoc:include type="modules" name="man_page_content" />
-	<div class="container">
+		<?php if (JRequest::getVar( 'view' ) != 'article') : ?>
+				<div class="col-xs-12 col-md-9">
+					<jdoc:include type="modules" name="category_top" />
+				</div>
+		<?php endif; ?>
+		<div class="col-md-3 pull-right">
+			<jdoc:include type="modules" name="right_column" />
+		</div>
 		<jdoc:include type="component" />
 	</div>
 	<jdoc:include type="modules" name="footer" />

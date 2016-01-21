@@ -12,7 +12,7 @@ $item = $displayData['item'];
 ?>
 
 <p class="readmore">
-	<a class="btn" href="<?php echo $displayData['link']; ?>" itemprop="url">
+	<a href="<?php echo $displayData['link']; ?>" itemprop="url">
 		<?php if (!$params->get('access-view')) :
 			echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
 		elseif ($readmore = $item->alternative_readmore) :

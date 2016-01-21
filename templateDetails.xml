@@ -61,7 +61,9 @@
 		<position>breadcrumbs</position>
 		<position>footer</position>
 		<position>logo</position>
-		<position>man_page_content</position>
+		<position>main_page_content</position>
+		<position>right_column</position>
+		<position>category_top</position>
 	</positions>
 
     <config>
