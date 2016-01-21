@@ -15,17 +15,16 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 $canEdit = $this->item->params->get('access-edit');
 $info    = $params->get('info_block_position', 0);
 $images = json_decode($this->item->images);
+$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
 ?>
-
 <div class="category-item">
-		<div class="row">
+		<div class="row col-md-12">
 		<img class="image_intro col-md-4" src="<?php echo $images->image_intro; ?>" alt="<?php $this->item->image_intro_alt; ?>">
 			<div class="wrap-content col-md-8 col-xs-12">
-			<h4><?php echo $this->item->title; ?></h4>
+			<h4><a href="<?php  echo $link; ?>"><?php echo $this->item->title; ?></a></h4>
 				<p><?php echo $this->item->introtext?></p>
 					<div class="readmore-block">
 					<?php 
-							$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
 							echo JLayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link));
 						?>
 					</div>

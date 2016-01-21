@@ -62,6 +62,7 @@
 		<position>footer</position>
 		<position>logo</position>
 		<position>man_page_content</position>
+		<position>italy_head</position>
 	</positions>
 
     <config>
