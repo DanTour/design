@@ -19,7 +19,7 @@ JHtml::_('behavior.caption');
 			<?php if (!empty($this->intro_items)) : ?>
 						<?php foreach($this->intro_items as $item) : ?>
 							<div class="col-md-4 col-xs-12 no-gutter">
-								<div class="item-s">
+								<div class="info">
 								<?php $images = json_decode($item->images);
 									if (!empty( $images )&& $images->image_intro ) : ?>
 										<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid)) ; ?>">
