@@ -61,6 +61,7 @@ require dirname(__FILE__) . '/php/init.php';
 	</nav>
 	
 	<jdoc:include type="modules" name="carousel" />
+	<jdoc:include type="modules" name="carouse_not_main_page" />
 	<jdoc:include type="modules" name="main_page_content" />
 	<div class="container no-gutter">
 		<jdoc:include type="modules" name="breadcrumbs" />
