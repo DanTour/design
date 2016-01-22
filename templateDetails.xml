@@ -65,6 +65,7 @@
 		<position>right_column</position>
 		<position>category_top</position>
 		<position>italy_head</position>
+		<position>carouse_not_main_page</position>
 	</positions>
 
     <config>
