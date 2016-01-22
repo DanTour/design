@@ -44,6 +44,15 @@ h2 {
 	padding-bottom: 45px;
 }
 
+h3 {
+	font-size: 26px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	color: #007cb7;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #afafaf;
+}
+
 .no-gutter {
 	padding-left: 0;
 	padding-right: 0;
@@ -472,6 +481,26 @@ footer {
 			font-weight : bold;
 			font-size : 16px;
 			border : solid 5px #007cb7;
+		}
+	}
+}
+
+.category-faq {
+	a {
+		text-transform : uppercase;
+		color: #c9c9c9;
+		
+		&.active, &:hover {
+			text-decoration: none;
+			color: #007cb7;
+		}
+	}
+	
+	[class^='info-tab-'] {
+		display: none;
+		
+		&.active {
+			display: block;
 		}
 	}
 }

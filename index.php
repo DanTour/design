@@ -65,14 +65,19 @@ require dirname(__FILE__) . '/php/init.php';
 	<div class="container no-gutter">
 		<jdoc:include type="modules" name="breadcrumbs" />
 		<?php if (JRequest::getVar( 'view' ) != 'article') : ?>
-				<div class="col-xs-12 col-md-9">
-					<jdoc:include type="modules" name="category_top" />
-				</div>
+			<div class="col-xs-12 col-md-9">
+				<jdoc:include type="modules" name="category_top" />
+			</div>
 		<?php endif; ?>
 		<div class="col-md-3 pull-right">
 			<jdoc:include type="modules" name="right_column" />
 		</div>
 		<jdoc:include type="component" />
+		<?php if (JRequest::getVar( 'view' ) != 'article') : ?>
+			<div class="col-xs-12 col-md-12">
+				<jdoc:include type="modules" name="category_faq" />
+			</div>
+		<?php endif; ?>
 	</div>
 	<jdoc:include type="modules" name="footer" />
 	
