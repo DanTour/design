@@ -37,10 +37,14 @@ function pagination_list_footer($list)
  * @return string
  */
 function pagination_list_render($list)
-{
-    $html = array();
+{	
+	$list['start']['data'] = str_replace('Start', '«', $list['start']['data']);
+	$list['previous']['data'] = str_replace('Prev', '‹', $list['previous']['data']);
+	$list['next']['data'] = str_replace('Next', '›', $list['next']['data']);
+	$list['end']['data'] = str_replace('End', '»', $list['end']['data']);
 
-    $html[] = '<ul>';
+    $html = array();
+	$html[] = '<ul class="pagination">';
     $html[] = '<li class="pagination-start">' . $list['start']['data'] . '</li>';
     $html[] = '<li class="pagination-prev">' . $list['previous']['data'] . '</li>';
 

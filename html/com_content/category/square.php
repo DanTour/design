@@ -16,7 +16,7 @@ JHtml::_('behavior.caption');
 ?>
 
 <div class="container">
-	
+			<?php// print_r($this->params) ?>
 			<?php if (!empty($this->intro_items)) : ?>
 						<?php foreach($this->intro_items as $item) : ?>
 							<div class="col-md-4 col-sm-6 col-xs-12">
@@ -48,5 +48,8 @@ JHtml::_('behavior.caption');
 							</div>
 						<?php endforeach ?>
 			<?php endif ?>
-	
+			<?php if (($this->params->def('show_pagination', 1) == 1 || ($this->params->get('show_pagination') == 2)) && ($this->pagination->get('pages.total') > 1)) : ?>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+					<?php echo $this->pagination->getPagesLinks(); ?> </div>
+			<?php endif; ?>
 </div>

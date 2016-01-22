@@ -476,3 +476,39 @@ footer {
 	}
 }
 
+.pagination {
+	li {
+	
+	font-weight : lighter ;
+	font-size : 24px;
+	
+		
+		span, span:hover {
+			background-color : #007cb7;
+			color : white;
+		}
+		
+		a {
+			color: #000;
+			
+			
+			
+			&:hover {
+				color : #007cb7;
+			}
+		}
+		
+		 
+		&:nth-child(1), &:nth-child(2), &:nth-last-child(1), &:nth-last-child(2)  {
+			span {
+				visibility : hidden;
+			}
+			a {
+				border-radius : 0;
+			}
+			span {
+				border-radius : 0;
+			}
+		}
+	}
+}

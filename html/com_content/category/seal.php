@@ -100,10 +100,7 @@ JHtml::_('behavior.caption');
 					<?php echo $this->loadTemplate('children'); ?> </div>
 			<?php endif; ?>
 			<?php if (($this->params->def('show_pagination', 1) == 1 || ($this->params->get('show_pagination') == 2)) && ($this->pagination->get('pages.total') > 1)) : ?>
-				<div class="pagination">
-					<?php if ($this->params->def('show_pagination_results', 1)) : ?>
-						<p class="counter pull-right"> <?php echo $this->pagination->getPagesCounter(); ?> </p>
-					<?php endif; ?>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
 					<?php echo $this->pagination->getPagesLinks(); ?> </div>
 			<?php endif; ?>
 		</div>
