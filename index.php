@@ -14,6 +14,8 @@ defined('_JEXEC') or die;
 // init $tpl helper
 require dirname(__FILE__) . '/php/init.php';
 
+$menuRootId = JFactory::getApplication()->getMenu()->getActive()->tree[0];
+
 ?><?php echo $tpl->renderHTML(); ?>
 <head>
     <jdoc:include type="head" />
@@ -24,11 +26,6 @@ require dirname(__FILE__) . '/php/init.php';
         You are using an <strong>outdated</strong> browser. Please
         <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience. </p><![endif]-->
 
-
-    <!--
-        Your HTML code starts here!
-    -->
-
     <?php if ($tpl->isMobile()) : ?>
         <!-- only for mobiles  -->
     <? endif; ?>
@@ -36,8 +33,6 @@ require dirname(__FILE__) . '/php/init.php';
     <?php if ($tpl->isTablet()) : ?>
         <!-- only for tablets  -->
     <? endif; ?>
-
-    
     
     <?php if ($tpl->isDebug()) : ?>
         <jdoc:include type="modules" name="debug" />
@@ -71,9 +66,11 @@ require dirname(__FILE__) . '/php/init.php';
 				<jdoc:include type="modules" name="category_top" />
 			</div>
 		<?php endif; ?>
-		<div class="col-md-3 pull-right">
-			<jdoc:include type="modules" name="right_column" />
-		</div>
+		<?php if (JRequest::getVar( 'view' ) == 'article' || $menuRootId == 106) : ?>
+			<div class="col-md-3 pull-right">
+				<jdoc:include type="modules" name="right_column" />
+			</div>
+		<?php endif; ?>
 		<jdoc:include type="component" />
 		<?php if (JRequest::getVar( 'view' ) != 'article') : ?>
 			<div class="col-xs-12 col-md-12">
