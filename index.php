@@ -49,7 +49,7 @@ $menuRootId = JFactory::getApplication()->getMenu()->getActive()->tree[0];
 			</button>		
 			<a class="navbar-brand" href="#">Project Name</a>
 		</div>
-		<div class="collapse navbar-collapse navbar-right margin-right">
+		<div class="collapse navbar-collapse navbar-right">
 			<jdoc:include type="modules" name="top_menu" />
 		</div>
 	</div>

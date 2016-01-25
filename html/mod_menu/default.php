@@ -1,7 +1,7 @@
 <?php
 defined('_JEXEC') or die;
 ?>
-<ul class="nav navbar-nav navbar-right <?php echo $class_sfx;?>"<?php
+<ul class="nav navbar-nav <?php echo $class_sfx;?>"<?php
 	$tag = '';
 	if ($params->get('tag_id') != null)
 	{
