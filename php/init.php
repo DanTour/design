@@ -31,6 +31,7 @@ $tpl
 		'//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css',
 		'bootstrap-submenu.min.css',
 		'carousel.css',
+		'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css',
 		'slimbox-jquery/slimbox2-rtl.css',
 		'template.less',
     ))
@@ -42,6 +43,8 @@ $tpl
         'template.js',
 		'bootstrap.min.js',
 		'bootstrap-submenu.min.js',
+		'//code.jquery.com/ui/1.11.3/jquery-ui.min.js',
+		'//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js',
 		//'common.js',
 		'slimbox2.js',
 		'custom.js',

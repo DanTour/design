@@ -61,6 +61,7 @@ $menuRootId = JFactory::getApplication()->getMenu()->getActive()->tree[0];
 	<jdoc:include type="modules" name="main_page_content" />
 	<div class="container no-gutter">
 		<jdoc:include type="modules" name="breadcrumbs" />
+		<jdoc:include type="modules" name="inquire_now" />
 		<?php if (JRequest::getVar( 'view' ) != 'article') : ?>
 			<div class="col-xs-12 col-md-9">
 				<jdoc:include type="modules" name="category_top" />
