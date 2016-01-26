@@ -54,6 +54,9 @@
 					},
 					phone : {
 						required : true,
+					},
+					email : {
+						required : true,
 					}
 				},
 				messages : {
@@ -86,6 +89,9 @@
 					},
 					phone : {
 						required : "This field is required",
+					},
+					email : {
+						required : "Pls input your email",
 					}
 				}
 			});
