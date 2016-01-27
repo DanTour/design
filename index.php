@@ -79,6 +79,9 @@ $menuRootId = JFactory::getApplication()->getMenu()->getActive()->tree[0];
 			</div>
 		<?php endif; ?>
 	</div>
+	<?php if (JRequest::getVar( 'view' ) != 'article') : ?>
+		<jdoc:include type="modules" name="category_footer" />
+	<?php endif; ?>
 	<jdoc:include type="modules" name="footer" />
 	
 </body>
