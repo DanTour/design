@@ -68,13 +68,13 @@ $menuRootId = JFactory::getApplication()->getMenu()->getActive()->tree[0];
 			</div>
 		<?php endif; ?>
 		<?php if (JRequest::getVar( 'view' ) == 'article' || $menuRootId == 106) : ?>
-			<div class="col-md-3 pull-right">
+			<div class="col-xs-12 col-sm-12 col-md-3 pull-right">
 				<jdoc:include type="modules" name="right_column" />
 			</div>
 		<?php endif; ?>
 		<jdoc:include type="component" />
 		<?php if (JRequest::getVar( 'view' ) != 'article') : ?>
-			<div class="col-xs-12 col-md-12">
+			<div class="col-xs-12 col-sm-12 col-md-12">
 				<jdoc:include type="modules" name="category_faq" />
 			</div>
 		<?php endif; ?>

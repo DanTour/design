@@ -19,6 +19,8 @@ $canEdit = $params->get('access-edit');
 $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
 JHtml::_('behavior.caption');
+
+$menuRootId = JFactory::getApplication()->getMenu()->getActive()->tree[0];
 ?>
 
 <div class="item-page col-md-9 <?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Article">
